@@ -17,17 +17,142 @@
     color: #fff;
 }
 
+/* nav-buttons */
 .nav-link {
-    margin-right: 20px;
-    color: #f4f3ee;
+    display: inline-block;
+    position: relative;
+    background: none;
+    border: none;
 
-    transition: linear .1s;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+
+    background: rgba(0, 0, 0, 0.09);
+
+    margin-right: 10px;
 }
 
 .nav-link:hover {
-    color: #fff;
-    border-bottom: 3px solid #8a817c;
+    color: #e0afa0;
 }
+
+span {
+    display: block;
+    padding: 10px 10px;
+}
+
+.nav-link::before,
+button::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #fff;
+}
+
+span::before,
+span::after {
+    content: "";
+    width: 2px;
+    height: 0;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #fff;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover span::before,
+.nav-link:hover span::after {
+    height: 100%;
+}
+
+.nav-link::before,
+.nav-link::after {
+    transition-delay: 0.2s;
+}
+
+.nav-link span::before,
+.nav-link span::after {
+    transition-delay: 0s;
+}
+
+.nav-link::before {
+    right: 0;
+    top: 0;
+}
+
+.nav-link::after {
+    left: 0;
+    bottom: 0;
+}
+
+.nav-link span::before {
+    left: 0;
+    top: 0;
+}
+
+.nav-link span::after {
+    right: 0;
+    bottom: 0;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+    transition-delay: 0s;
+}
+
+.nav-link:hover span::before,
+.nav-link:hover span::after {
+    transition-delay: 0.2s;
+}
+
+::before,
+.nav-link::after {
+    transition-delay: 0.2s;
+}
+
+.nav-link span::before,
+.nav-link span::after {
+    transition-delay: 0s;
+}
+
+.nav-link::before {
+    right: 0;
+    top: 0;
+}
+
+.nav-link::after {
+    left: 0;
+    bottom: 0;
+}
+
+.nav-link span::before {
+    left: 0;
+    top: 0;
+}
+
+.nav-link span::after {
+    right: 0;
+    bottom: 0;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+    transition-delay: 0s;
+}
+
+.nav-link:hover span::before,
+.nav-link:hover span::after {
+    transition-delay: 0.2s;
+}
+
 
 .jumbotron {
     font-family: 'Roboto Mono', monospace;

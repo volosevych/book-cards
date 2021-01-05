@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
+
 import Header from './components/Header';
 import Jumb from './components/Jumbotron';
+import Wrapper from './components/Wrapper';
+
+import NoMatch from './components/Pages/NoMatch';
+import Search from './components/Pages/Search';
+import Saved from './components/Pages/Saved';
 
 class App extends Component {
   render() {
@@ -10,6 +16,12 @@ class App extends Component {
         <div>
           <Header/>
           <Jumb/>
+          <Wrapper>
+              <Route exact path='/' component={Search}/>
+              <Route exact path='/search' component={Search}/>
+              <Route exact path='/saved' component={Saved}/>
+              <Route exact path='/noMatch' component={NoMatch}/>
+          </Wrapper>
         </div>
       </Router>
     );

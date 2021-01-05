@@ -1,0 +1,30 @@
+.title-input {
+    padding-top: 50px;
+    padding-bottom: 10px;
+
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+}
+
+.btn-search {
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+
+    border-radius: 2px;
+
+    background-color: #463f3a;
+    color: #fff;
+    border: none;
+
+    transition: linear .2s;
+}
+
+.btn-search:hover {
+    color: #fff;
+    background-color: #bcb8b1;
+}
+
+.saved-books {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 19px;
+}

@@ -12,13 +12,13 @@ const Header = () => {
                         <Link
                             to="/search"
                             className={window.location.pathname === "/search" ? "nav-link active" : "nav-link"}
-                        > Search Book</Link>
+                        ><span>Search Book</span></Link>
                     </li>
                     <li className="nav-item">
                         <Link
                             to="/saved"
                             className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}
-                        >Saved Books</Link>
+                        ><span>Saved Books</span></Link>
                     </li>
                 </ul>
             </div>

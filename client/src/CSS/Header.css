@@ -1,0 +1,34 @@
+.navbar {
+    background-color: #463f3a;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-brand {
+    color: #fff;
+    border: none;
+    background-color: #463f3a;
+}
+
+.book {
+    font-size: 35px;
+}
+
+.navbar-brand:hover {
+    color: #fff;
+}
+
+.nav-link {
+    margin-right: 20px;
+    color: #f4f3ee;
+
+    transition: linear .1s;
+}
+
+.nav-link:hover {
+    color: #fff;
+    border-bottom: 3px solid #8a817c;
+}
+
+.jumbotron {
+    font-family: 'Roboto Mono', monospace;
+}

@@ -1,9 +1,19 @@
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Header from './components/Header';
+import Jumb from './components/Jumbotron';
 
-
-function App() {
-  return (
-    <div><h1>hi</h1></div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Router>
+        <div>
+          <Header/>
+          <Jumb/>
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default App;

@@ -3,7 +3,7 @@ const routes = require('./routes/index');
 const path = require('path');
 require('./config/db')();
 
-const PORT = process.env.port || 1000;
+// const PORT = process.env.port || 1000;
 const app = express();
 
 app.use(express.urlencoded({extended: true}));
@@ -15,6 +15,6 @@ app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "/client/build/index.html"))
 })
 
-app.listen(PORT, () => {
-    console.log(`Server works on ${PORT} port!`)
+app.listen(process.env.PORT || 1000, function () {
+    console.log("Express server listening on port...", this.address().port, app.settings.env);
 })

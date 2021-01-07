@@ -5,12 +5,13 @@
   "main": "server.js",
   "repository": "git@github.com:volosevych/book-cards.git",
   "scripts": {
-    "start": "nodemon server.js",
-    "start:client": "npm start --prefix client",
-    "dev": "concurrently \"npm run client\" \"npm run server\"",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently -k \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "engines": {
     "node": "12.19.0"

@@ -33,7 +33,7 @@ class Results extends Component {
                     <h1 className="text-center">No Results to Display</h1>
                 ) : (
                         <div>
-                            {this.props.books(result => (
+                            {this.props.books.split(result => (
                                 <div className="card mb-3" key={result._id}>
                                     <div className="row">
                                         <div className="col-md-2">

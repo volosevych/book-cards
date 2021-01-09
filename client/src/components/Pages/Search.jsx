@@ -51,7 +51,8 @@ class Search extends React.Component {
                     handleInputChange={this.handleInputChange}
                     handleFormSubmit={this.handleFormSubmit}
                 />
-                <div className="container pt-5">
+                <div className="container">
+                    <h2>Results</h2>
                     <Results books={this.state.books} />
                 </div>
             </div>

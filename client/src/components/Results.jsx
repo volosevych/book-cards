@@ -11,7 +11,10 @@ class Results extends Component {
 
     componentDidMount() {
         API.savedBooks()
-            .then(response  => this.setState({ savedBooks: response.data.results }))
+            .then(response  =>  {
+                console.log(response.data.results)
+                this.setState({ savedBooks: response.data.results })
+            })
             .catch(err => console.error(err));
     }
 

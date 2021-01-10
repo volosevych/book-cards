@@ -2,14 +2,16 @@ import React, { Component } from "react";
 import API from "../utils/API";
 
 class Results extends Component {
-
-    state = {
-        savedBooks: [],
-    }
+    constructor(props) {
+        super(props);
+        this.state =({
+            savedBooks: []
+        })
+      }
 
     componentDidMount() {
         API.savedBooks()
-            .then(savedBooks => this.setState({ savedBooks: savedBooks }))
+            .then(response  => this.setState({ savedBooks: response.data.results }))
             .catch(err => console.error(err));
     }
 
@@ -44,7 +46,7 @@ class Results extends Component {
                                                 <h5 className="card-title">{result.title} by {result.authors}</h5>
                                                 <p className="card-text">{result.description}</p>
                                                 <div>
-                                                    <a href={result.link} className="btn badge-pill btn-outline-dark mt-3" target="_blank" >View</a>
+                                                    <a href={result.link} className="btn badge-pill btn-outline-dark mt-3" target="__blank" >View</a>
                                                     <button onClick={() => this.handleSave(result)} className="btn badge-pill btn-outline-warning mt-3 ml-3" >
                                                         {this.state.savedBooks.map(book => book._id).includes(result._id) ? "Unsave" : "Save"}
                                                     </button>

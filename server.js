@@ -3,7 +3,6 @@ const routes = require('./routes/index');
 const path = require('path');
 require('./config/db')();
 
-// const PORT = process.env.port || 1000;
 const app = express();
 
 app.use(express.urlencoded({extended: true}));
